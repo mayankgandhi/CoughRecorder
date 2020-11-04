@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="du9-P9-JQ6">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cough Detector-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="Cough Detector" id="BYZ-38-t0r" customClass="CoughDetectionViewController" customModule="AudioRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mLS-ap-AOr">
+                                <rect key="frame" x="86" y="219" width="242" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T0X-1u-HGG">
+                                <rect key="frame" x="86" y="319" width="242" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="yAL-6Q-0IU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amplitude" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uE2-P1-riY">
+                                <rect key="frame" x="86" y="163" width="102" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="28" id="eFt-h2-hDG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max-Amplitude" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R9I-7p-t84">
+                                <rect key="frame" x="86.000000000000014" y="265" width="153.33333333333337" height="27.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coughs" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aXr-ih-Xd2">
+                                <rect key="frame" x="86" y="357" width="78" height="29.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WFa-6j-QnO">
+                                <rect key="frame" x="86" y="396.66666666666669" width="242" height="18.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iiv-Tm-SNe">
+                                <rect key="frame" x="259" y="479" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchPressed:" destination="BYZ-38-t0r" eventType="valueChanged" id="Z28-it-ues"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ydb-mz-kXd">
+                                <rect key="frame" x="86" y="484" width="59" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="B1Q-fW-TOm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vMw-3z-oHm">
+                                <rect key="frame" x="66" y="567" width="242" height="30"/>
+                                <color key="backgroundColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="titleShadowOffset" width="4" height="0.0"/>
+                                <state key="normal" title="Detect Cough">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="detectCoughPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CNx-zI-U1T"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="mLS-ap-AOr" secondAttribute="trailing" constant="47" id="1Id-Fp-Zz6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iiv-Tm-SNe" secondAttribute="trailing" constant="67" id="6sO-bS-5vY"/>
+                            <constraint firstItem="mLS-ap-AOr" firstAttribute="top" secondItem="uE2-P1-riY" secondAttribute="bottom" constant="28" id="6vp-I1-sCO"/>
+                            <constraint firstItem="uE2-P1-riY" firstAttribute="leading" secondItem="T0X-1u-HGG" secondAttribute="leading" id="AD4-eT-7LM"/>
+                            <constraint firstItem="WFa-6j-QnO" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="CWa-mi-DaF"/>
+                            <constraint firstItem="T0X-1u-HGG" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="319" id="D9Z-2P-6TC"/>
+                            <constraint firstItem="vMw-3z-oHm" firstAttribute="top" secondItem="iiv-Tm-SNe" secondAttribute="bottom" constant="57" id="DmP-pa-O2M"/>
+                            <constraint firstItem="WFa-6j-QnO" firstAttribute="leading" secondItem="T0X-1u-HGG" secondAttribute="leading" id="H0e-51-f1T"/>
+                            <constraint firstItem="uE2-P1-riY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="86" id="JJ1-Ms-2oN"/>
+                            <constraint firstItem="WFa-6j-QnO" firstAttribute="top" secondItem="aXr-ih-Xd2" secondAttribute="bottom" constant="10.333333333333314" id="OTa-z6-Q46"/>
+                            <constraint firstItem="WFa-6j-QnO" firstAttribute="leading" secondItem="aXr-ih-Xd2" secondAttribute="leading" id="PUr-1n-fSa"/>
+                            <constraint firstItem="R9I-7p-t84" firstAttribute="leading" secondItem="T0X-1u-HGG" secondAttribute="leading" id="Q1M-6a-IrF"/>
+                            <constraint firstItem="R9I-7p-t84" firstAttribute="leading" secondItem="mLS-ap-AOr" secondAttribute="leading" id="Qg1-PK-kdg"/>
+                            <constraint firstItem="ydb-mz-kXd" firstAttribute="top" secondItem="WFa-6j-QnO" secondAttribute="bottom" constant="68.666666666666686" id="RbA-gV-1Bu"/>
+                            <constraint firstAttribute="bottom" secondItem="ydb-mz-kXd" secondAttribute="bottom" constant="307" id="Rbc-3K-wlG"/>
+                            <constraint firstItem="vMw-3z-oHm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="U2G-gM-gZZ"/>
+                            <constraint firstItem="iiv-Tm-SNe" firstAttribute="centerY" secondItem="ydb-mz-kXd" secondAttribute="centerY" id="UXf-q5-KTf"/>
+                            <constraint firstItem="ydb-mz-kXd" firstAttribute="leading" secondItem="WFa-6j-QnO" secondAttribute="leading" id="diU-MM-s6C"/>
+                            <constraint firstItem="WFa-6j-QnO" firstAttribute="trailing" secondItem="T0X-1u-HGG" secondAttribute="trailing" id="iGl-vL-dcb"/>
+                            <constraint firstItem="R9I-7p-t84" firstAttribute="top" secondItem="mLS-ap-AOr" secondAttribute="bottom" constant="25" id="ivc-Io-mmw"/>
+                            <constraint firstItem="vMw-3z-oHm" firstAttribute="trailing" secondItem="iiv-Tm-SNe" secondAttribute="trailing" id="nF2-Wf-S4P"/>
+                            <constraint firstItem="aXr-ih-Xd2" firstAttribute="top" secondItem="T0X-1u-HGG" secondAttribute="bottom" constant="16" id="nKk-mz-Fk3"/>
+                            <constraint firstItem="mLS-ap-AOr" firstAttribute="trailing" secondItem="T0X-1u-HGG" secondAttribute="trailing" id="qHk-8S-9mI"/>
+                            <constraint firstItem="uE2-P1-riY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="xU0-Lt-pjl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cough Detector" id="tyG-2Q-NoX"/>
+                    <connections>
+                        <outlet property="AmplitudeLabel" destination="mLS-ap-AOr" id="3ho-2I-0Nd"/>
+                        <outlet property="coughDetectedLabel" destination="WFa-6j-QnO" id="Iz4-cP-9bN"/>
+                        <outlet property="maxAmplLabel" destination="T0X-1u-HGG" id="yxK-mb-Ezm"/>
+                        <outlet property="recordSwitch" destination="iiv-Tm-SNe" id="cUc-nN-zWr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3666.4000000000001" y="-305.17241379310349"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="wwR-Rn-StN">
+            <objects>
+                <viewController title="History" id="5Xe-eo-Qrb" customClass="HistoryTableViewController" customModule="AudioRecorder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="azw-Lu-Iyg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ty1-I5-HdH">
+                                <rect key="frame" x="0.0" y="88" width="375" height="641"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="historyCell" rowHeight="100" id="ooF-ah-U6i" customClass="HistoryTableViewCell" customModule="AudioRecorder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="100"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ooF-ah-U6i" id="4fM-S9-Q6K">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wD0-lz-e9F">
+                                                    <rect key="frame" x="283" y="44" width="67" height="32"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EiE-4B-Pd0">
+                                                    <rect key="frame" x="25" y="44" width="165" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="EiE-4B-Pd0" firstAttribute="leading" secondItem="4fM-S9-Q6K" secondAttribute="leadingMargin" constant="10" id="1fn-eA-19m"/>
+                                                <constraint firstItem="EiE-4B-Pd0" firstAttribute="top" secondItem="4fM-S9-Q6K" secondAttribute="topMargin" constant="33" id="1sI-ty-xoa"/>
+                                                <constraint firstItem="wD0-lz-e9F" firstAttribute="top" secondItem="4fM-S9-Q6K" secondAttribute="topMargin" constant="33" id="2f3-JT-aMg"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="wD0-lz-e9F" secondAttribute="trailing" constant="10" id="qaw-io-6kW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="coughCountLabel" destination="wD0-lz-e9F" id="ChS-qT-ONA"/>
+                                            <outlet property="dateLabel" destination="EiE-4B-Pd0" id="Wgg-ei-vdJ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="k5e-Dr-rEg"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Cough History" id="rin-5B-HbM"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="Ty1-I5-HdH" id="sBA-PZ-5ae"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DPz-lZ-cDe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3666.4000000000001" y="379.80295566502463"/>
+        </scene>
+        <!--Cough Detection-->
+        <scene sceneID="thA-F7-PLy">
+            <objects>
+                <tabBarController title="Cough Detection" id="du9-P9-JQ6" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="fill" id="G1t-GW-CpU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wu3-DF-qRy" kind="relationship" relationship="viewControllers" id="pmM-Jg-O0q"/>
+                        <segue destination="1eP-MP-g8S" kind="relationship" relationship="viewControllers" id="uv6-6C-E2j"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hv-cA-TfC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1771" y="52"/>
+        </scene>
+        <!--Cough Detection-->
+        <scene sceneID="NqQ-3i-uok">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1eP-MP-g8S" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cough Detection" image="music.mic" catalog="system" id="6f1-Iw-Qku"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="FRA-th-qyT">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="deq-L7-bd3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vFp-C0-NuD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2724" y="-305.17241379310349"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="uLd-P2-oRg">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wu3-DF-qRy" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="clock" catalog="system" id="eTT-tu-FiZ"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7c7-21-Ff9">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5Xe-eo-Qrb" kind="relationship" relationship="rootViewController" id="ReV-id-kmt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyA-qN-FyA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2724" y="379.80295566502463"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="music.mic" catalog="system" width="128" height="118"/>
+    </resources>
+</document>
